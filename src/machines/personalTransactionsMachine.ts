@@ -7,7 +7,7 @@ export const personalTransactionsMachine = dataMachine("personalTransactions").w
   services: {
     fetchData: async (ctx, event: any) => {
       const payload = omit("type", event);
-      const resp = await httpClient.get(`http://localhost:${backendPort}/transactions`, {
+      const resp = await httpClient.get(`https://cypress-realworld-app-puce.vercel.app/transactions`, {
         params: !isEmpty(payload) ? payload : undefined,
       });
       return resp.data;

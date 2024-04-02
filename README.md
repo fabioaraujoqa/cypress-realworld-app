@@ -121,13 +121,13 @@ yarn cypress:open
 > ```js
 > {
 >   env: {
->     apiUrl: "http://localhost:13001",
+>     apiUrl: "https://cypress-realworld-app-puce.vercel.app",
 >     codeCoverage: {
->       url: "http://localhost:13001/__coverage__"
+>       url: "https://cypress-realworld-app-puce.vercel.app/__coverage__"
 >     },
 >   },
 >   e2e: {
->     baseUrl: "http://localhost:13000"
+>     baseUrl: "https://cypress-realworld-app-puce.vercel.app"
 >   }
 > }
 > ```
