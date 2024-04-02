@@ -9,8 +9,8 @@ const awsmobile = {
         oauth: {
           domain: "YOUR_COGNITO_USER_POOL_HOSTED_UI_DOMAIN_PREFIX.auth.us-east-1.amazoncognito.com",
           scopes: ["email", "openid", "aws.cognito.signin.user.admin"],
-          redirectSignIn: ["http://localhost:3000/"],
-          redirectSignOut: ["http://localhost:3000/"],
+          redirectSignIn: ["https://cypress-realworld-oecrsikda-fabio-araujos-projects.vercel.app/"],
+          redirectSignOut: ["https://cypress-realworld-oecrsikda-fabio-araujos-projects.vercel.app/"],
           responseType: "token",
         },
       },

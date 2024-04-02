@@ -223,7 +223,7 @@ Prerequisites include an [Amazon Cognito][cognito] account. Environment variable
 
 - A user pool is required (identity pool is not used here)
   - The user pool must have a hosted UI domain configured, which must:
-    - allow callback and sign-out URLs of `http://localhost:3000/`,
+    - allow callback and sign-out URLs of `https://cypress-realworld-oecrsikda-fabio-araujos-projects.vercel.app/`,
     - allow implicit grant Oauth grant type,
     - allow these OpenID Connect scopes:
       - aws.cognito.signin.user.admin
@@ -232,7 +232,7 @@ Prerequisites include an [Amazon Cognito][cognito] account. Environment variable
   - The user pool must have an app client configured, with:
     - enabled auth flow `ALLOW_USER_PASSWORD_AUTH`, only for programmatic login flavor of test.
     - The `cy.origin()` flavor of test only requires auth flow `ALLOW_USER_SRP_AUTH`, and does not require `ALLOW_USER_PASSWORD_AUTH`.
-  - The user pool must have a user corresponding to the `AWS_COGNITO` env vars mentioned below, and the user's Confirmation Status must be `Confirmed`. If it is `Force Reset Password`, then use a browser to log in once at `http://localhost:3000` while `yarn dev:cognito` is running to reset their password.
+  - The user pool must have a user corresponding to the `AWS_COGNITO` env vars mentioned below, and the user's Confirmation Status must be `Confirmed`. If it is `Force Reset Password`, then use a browser to log in once at `https://cypress-realworld-oecrsikda-fabio-araujos-projects.vercel.app` while `yarn dev:cognito` is running to reset their password.
 
 The test knobs are in a few places:
 
