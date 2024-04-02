@@ -10,7 +10,7 @@ describe("SignInForm", () => {
     authService.start();
 
     expect(authService.state.value).to.equal("unauthorized");
-    cy.intercept("POST", "http://localhost:3001/login", {
+    cy.intercept("POST", "https://cypress-realworld-oecrsikda-fabio-araujos-projects.vercel.app/login", {
       user: {
         id: "t45AiwidW",
         uuid: "6383f84e-b511-44c5-a835-3ece1d781fa8",
